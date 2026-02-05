@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact - Portfolio Pro</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="page-body">
+  
+  <!-- HEADER NAVIGATION -->
+  <header class="main-header">
+    <button onclick="history.back()" class="back-button"> BACK
+    </button>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="main-nav">
+      <a href="pro.html#accueil">Accueil</a>
+      <a href="formation.html">Formation</a>
+      <a href="competences.html">Compétences</a>
+      <a href="experience.html">Expérience</a>
+      <a href="projets.html">Projets</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero hero-pro">
+    <div class="hero-content">
+      <h1 class="hero-title">CONTACT</h1>
+      <h2 class="hero-subtitle">RESTONS EN CONTACT</h2>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="section contact-section">
+    <div class="section-inner">
+      <h2 class="page-title">Contact</h2>
+      <p class="contact-intro">N'hésitez pas à me contacter pour discuter de vos projets ou pour toute opportunité de collaboration.</p>
+      
+      <div class="contact-container">
+        
+        <div class="contact-cv">
+          <h3>Télécharger mon CV</h3>
+          <a href="CV_Portfolio.pdf" download="CV_Ufukan_Kocer.pdf" class="btn-cv-large">Mon CV</a>
+        </div>
+
+        <div class="contact-info">
+          <h3>Informations de contact</h3>
+          
+          <div class="contact-item" onclick="copyEmailToClipboard(event)" style="cursor: pointer;">
+            <div class="contact-icon">
+              <img src="assets/contact/mail.png" alt="Email" style="width: 40px; height: 40px;">
+            </div>
+            <div class="contact-details">
+              <h4>Email</h4>
+              <p>ufukan.kocer@gmail.com</p>
+            </div>
+          </div>
+
+          <a href="https://www.linkedin.com/in/ufukan-kocer/" target="_blank" class="contact-item-link">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <img src="assets/contact/linkedin.png" alt="LinkedIn" style="width: 40px; height: 40px;">
+              </div>
+              <div class="contact-details">
+                <h4>LinkedIn</h4>
+                <p>Ufukan Kocer</p>
+              </div>
+            </div>
+          </a>
+
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="footer-content">
+      <h3>Apprenez à me connaître</h3>
+      <div class="footer-links">
+        <a href="#" onclick="copyEmailToClipboard(event)" class="footer-link">EMAIL</a>
+        <a href="https://www.linkedin.com/in/ufukan-kocer/" target="_blank" class="footer-link">LINKEDIN</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

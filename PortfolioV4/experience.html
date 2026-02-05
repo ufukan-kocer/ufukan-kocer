@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Expérience - Portfolio Pro</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="page-body">
+  
+  <!-- HEADER NAVIGATION -->
+  <header class="main-header">
+    <button onclick="history.back()" class="back-button"> BACK
+    </button>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="main-nav">
+      <a href="pro.html#accueil">Accueil</a>
+      <a href="formation.html">Formation</a>
+      <a href="competences.html">Compétences</a>
+      <a href="experience.html">Expérience</a>
+      <a href="projets.html">Projets</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero hero-pro">
+    <div class="hero-content">
+      <h1 class="hero-title">EXPÉRIENCES</h1>
+      <h2 class="hero-subtitle">MON PARCOURS PROFESSIONNEL</h2>
+    </div>
+  </section>
+
+  <!-- EXPERIENCES SECTION -->
+  <section class="section">
+    <div class="section-inner">
+      <h2 class="page-title">Expériences Professionnelles</h2>
+      
+      <div class="gallery-grid experience-grid">
+        
+        <!-- Experience 1 -->
+        <a href="formations/stage-cegelec.html" class="gallery-card">
+          <div class="gallery-card-image">
+            <img src="assets/formations/cegelec.jpeg" alt="Stage Cegelec">
+            <div class="gallery-overlay">
+              <h3>Stage Technicien de Maintenance</h3>
+              <p>Cegelec - 2025</p>
+            </div>
+          </div>
+        </a>
+
+        <!-- Experience 2 -->
+        <a href="formations/but3-geii.html" class="gallery-card">
+          <div class="gallery-card-image">
+            <img src="assets/formations/but3.jpeg" alt="Alternance" class="img-zoom-more">
+            <div class="gallery-overlay">
+              <h3>Alternance BUT 3</h3>
+              <p>Entreprise - 2024-2027</p>
+            </div>
+          </div>
+        </a>
+
+        <!-- Experience 3 -->
+        <a href="formations/stage-architecte.html" class="gallery-card">
+          <div class="gallery-card-image">
+            <img src="assets/formations/stage-archi.jpeg" alt="Stage Architecture" class="img-zoom-more">
+            <div class="gallery-overlay">
+              <h3>Stage d'observation Architecte</h3>
+              <p>Ligne Point Carré - 2019</p>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="footer-content">
+      <h3>Apprenez à me connaître</h3>
+      <div class="footer-links">
+        <a href="#" onclick="copyEmailToClipboard(event)" class="footer-link">EMAIL</a>
+        <a href="https://www.linkedin.com/in/ufukan-kocer/" target="_blank" class="footer-link">LINKEDIN</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Projets - Portfolio Pro</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="page-body">
+  
+  <!-- HEADER NAVIGATION -->
+  <header class="main-header">
+    <button onclick="history.back()" class="back-button"> BACK
+    </button>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+   <nav class="main-nav">
+      <a href="pro.html#accueil">Accueil</a>
+      <a href="formation.html">Formation</a>
+      <a href="competences.html">Compétences</a>
+      <a href="experience.html">Expérience</a>
+      <a href="projets.html">Projets</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero hero-pro">
+    <div class="hero-content">
+      <h1 class="hero-title">PROJETS</h1>
+      <h2 class="hero-subtitle">MES RÉALISATIONS</h2>
+    </div>
+  </section>
+
+  <!-- PROJETS SECTION -->
+  <section class="section">
+    <div class="section-inner">
+      <p>  </p>
+      <h2 class="page-title">Projets</h2>
+      
+      <!-- Filtres -->
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">Tous</button>
+        <button class="filter-btn" data-filter="scolaire">Projets scolaires</button>
+        <button class="filter-btn" data-filter="perso">Projets perso</button>
+      </div>
+
+      <div class="gallery-grid">
+
+        <!-- Projet Perso 1: Portfolio -->
+        <div class="gallery-card project-item" data-category="perso">
+          <a href="projets/portfolio.html">
+            <div class="gallery-card-image">
+              <img src="assets/projets/photo1portfolio.png" alt="Portfolio">
+              <div class="gallery-overlay">
+                <h3>Portfolio</h3>
+                <p>Projet personnel - Site portfolio (2026)</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Projet Scolaire 1: Ferme hydroponique -->
+        <div class="gallery-card project-item" data-category="scolaire">
+          <a href="projets/ferme-hydroponique.html">
+            <div class="gallery-card-image">
+              <img src="assets/projets/photo1hydro.jpeg" alt="Ferme hydroponique">
+              <div class="gallery-overlay">
+                <h3>Ferme hydroponique</h3>
+                <p>Projet scolaire - Système de culture hydroponique automatisé (2025)</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Projet Perso 2: Photographie -->
+        <div class="gallery-card project-item" data-category="perso">
+          <a href="projets/photographie.html">
+            <div class="gallery-card-image">
+              <img src="assets/projets/photo1photo.jpg" alt="Photographie">
+              <div class="gallery-overlay">
+                <h3>Photographie</h3>
+                <p>Projet personnel - Portfolio photo (2025)</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Projet Scolaire 2: Robot détecteur d'obstacle -->
+        <div class="gallery-card project-item" data-category="scolaire">
+          <a href="projets/robot-obstacle.html">
+            <div class="gallery-card-image">
+              <img src="assets/projets/photo1robot.jpeg" alt="Robot détecteur d'obstacle">
+              <div class="gallery-overlay">
+                <h3>Robot détecteur d'obstacle</h3>
+                <p>Projet scolaire - Robotique et capteurs (2024)</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Projet Scolaire 3: Kart électrique -->
+        <div class="gallery-card project-item" data-category="scolaire">
+          <a href="projets/kart-electrique.html">
+            <div class="gallery-card-image">
+              <img src="assets/projets/photo1kart.jpeg" alt="Kart électrique">
+              <div class="gallery-overlay">
+                <h3>Kart électrique</h3>
+                <p>Projet scolaire - Véhicule électrique (2023)</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Projet Scolaire 4: SmartLight -->
+        <div class="gallery-card project-item" data-category="scolaire">
+          <a href="projets/smartlight.html">
+            <div class="gallery-card-image">
+              <img src="assets/projets/photo1smart.jpeg" alt="SmartLight">
+              <div class="gallery-overlay">
+                <h3>SmartLight</h3>
+                <p>Projet scolaire - Système d'éclairage intelligent (2023)</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Projet Scolaire 5: Système Domotique -->
+        <div class="gallery-card project-item" data-category="scolaire">
+          <a href="projets/systeme-domotique.html">
+            <div class="gallery-card-image">
+              <img src="assets/projets/photo1domotique.jpg" alt="Système Domotique">
+              <div class="gallery-overlay">
+                <h3>Système Domotique</h3>
+                <p>Projet scolaire - Automatisation et domotique (2023)</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Projet Perso 3: Création jeu en LUA -->
+        <div class="gallery-card project-item" data-category="perso">
+          <a href="projets/jeu-lua.html">
+            <div class="gallery-card-image">
+              <img src="assets/projets/photo1lua.png" alt="Création jeu en LUA">
+              <div class="gallery-overlay">
+                <h3>Création jeu en LUA</h3>
+                <p>Projet personnel - Jeu développé en LUA (2021)</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="footer-content">
+      <h3>Apprenez à me connaître</h3>
+      <div class="footer-links">
+        <a href="#" onclick="copyEmailToClipboard(event)" class="footer-link">EMAIL</a>
+        <a href="https://www.linkedin.com/in/ufukan-kocer/" target="_blank" class="footer-link">LINKEDIN</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

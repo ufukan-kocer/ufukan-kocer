@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio Photo - FK Studio</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="page-body">
+  
+  <!-- HEADER NAVIGATION -->
+  <header class="main-header">
+    <a href="index.html" class="logo-home">
+      <div class="home-icon">
+        <img src="assets/logo.png" alt="Logo" class="home-icon-img">
+      </div>
+    </a>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="main-nav">
+      <a href="#galerie">Galerie</a>
+      <a href="#apropos">À propos</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="accueil" class="hero hero-photo">
+    <div class="hero-content">
+      <h1 class="hero-title">FK STUDIO</h1>
+      <h2 class="hero-subtitle">PHOTOGRAPHIE AUTOMOBILE | PRIVÉ & ÉVÉNEMENTIEL</h2>
+      <p class="hero-description">Sublimez votre passion automobile. Immortalisez chaque détail, chaque performance.</p>
+    </div>
+  </section>
+
+  <!-- GALERIE SECTION -->
+  <section id="galerie" class="section">
+    <div class="section-inner">
+      <h2 class="page-title">Galerie Photo</h2>
+      
+      
+
+      <!-- Photos Grid -->
+      <div class="gallery-grid">
+        <div class="gallery-card project-item" data-category="all">
+          <div class="gallery-card-image">
+            <img src="photo/1.jpg" alt="FK Studio Photo 1">
+          </div>
+        </div>
+        
+        <div class="gallery-card project-item" data-category="all">
+          <div class="gallery-card-image">
+            <img src="photo/2.jpg" alt="FK Studio Photo 2">
+          </div>
+        </div>
+        
+        <div class="gallery-card project-item" data-category="all">
+          <div class="gallery-card-image">
+            <img src="photo/3.jpg" alt="FK Studio Photo 3">
+          </div>
+        </div>
+        
+        <div class="gallery-card project-item" data-category="all">
+          <div class="gallery-card-image">
+            <img src="photo/4.jpg" alt="FK Studio Photo 4">
+          </div>
+        </div>
+        
+        <div class="gallery-card project-item" data-category="all">
+          <div class="gallery-card-image">
+            <img src="photo/5.jpg" alt="FK Studio Photo 5">
+          </div>
+        </div>
+        
+        <div class="gallery-card project-item" data-category="all">
+          <div class="gallery-card-image">
+            <img src="photo/6.jpg" alt="FK Studio Photo 6">
+          </div>
+        </div>
+        
+        <div class="gallery-card project-item" data-category="all">
+          <div class="gallery-card-image">
+            <img src="photo/7.jpg" alt="FK Studio Photo 7">
+          </div>
+        </div>
+        
+        <div class="gallery-card project-item" data-category="all">
+          <div class="gallery-card-image">
+            <img src="photo/8.jpg" alt="FK Studio Photo 8">
+          </div>
+        </div>
+        
+        <div class="gallery-card project-item" data-category="all">
+          <div class="gallery-card-image">
+            <img src="photo/10.jpg" alt="FK Studio Photo 10">
+          </div>
+        </div>
+        
+       
+
+      </div>
+    </div>
+  </section>
+
+  <!-- À PROPOS SECTION -->
+  <section id="apropos" class="section section-alt">
+    <div class="section-inner">
+      <h2>À propos de FK Studio</h2>
+      <div class="two-columns" style="max-width: 1200px; margin: 0 auto; align-items: flex-start;">
+        <div class="text-block">
+          <p><strong>Photographe automobile spécialisé</strong> dans la mise en valeur de véhicules d'exception. Que ce soit pour un shooting privé de votre passion ou pour couvrir un événement automobile, je capture l'âme et la performance de chaque machine.</p>
+          <p>Avec une approche technique et artistique, je mets en lumière chaque ligne, chaque détail qui fait battre le cœur des passionnés. Séances photos personnalisées, reportages d'événements, collaborations avec clubs et concessionnaires.</p>
+          <p><strong>Besoin d'un photographe pour votre projet automobile ?</strong> Contactez-moi pour discuter de votre vision et donner vie à vos images.</p>
+        </div>
+        <div class="image-block" style="display: flex; align-items: flex-start;">
+          <img src="photo/propos.jpg" alt="FK Studio Photographie" style="width: auto; max-width: 100%; height: 450px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); object-fit: cover;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="section">
+    <div class="section-inner">
+      <h2 class="page-title">Contact</h2>
+      <div class="contact-container">
+        <div class="contact-info" style="grid-column: 1/-1;">
+          
+          <a href="https://instagram.com/fkstudi0" target="_blank" class="contact-item-link">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <img src="photo/instagram.png" alt="Instagram" style="width: 40px; height: 40px;">
+              </div>
+              <div class="contact-details">
+                <h4>Instagram</h4>
+                <p>@fkstudi0</p>
+              </div>
+            </div>
+          </a>
+
+          <div class="contact-item" onclick="copyEmailToClipboard(event)" style="cursor: pointer;">
+            <div class="contact-icon">
+              <img src="assets/contact/mail.png" alt="Email" style="width: 40px; height: 40px;">
+            </div>
+            <div class="contact-details">
+              <h4>Email</h4>
+              <p>ufukan.kocer@gmail.com</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="footer-content">
+      <h3>FK Studio</h3>
+      <div class="footer-links">
+        <a href="https://instagram.com/fkstudi0" target="_blank" class="footer-link">INSTAGRAM</a>
+        <a href="#" onclick="copyEmailToClipboard(event)" class="footer-link">EMAIL</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
