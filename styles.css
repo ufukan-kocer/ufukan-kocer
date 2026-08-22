@@ -1173,6 +1173,14 @@ a.skill-tech-card {
   font-size: 1rem;
 }
 
+/* Sur mobile, pas de survol possible : le texte reste affiché en permanence */
+@media (max-width: 768px) {
+  .gallery-overlay {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 /* ===================================
    PROJECT FILTERS
    =================================== */
@@ -2183,6 +2191,24 @@ span.competence-tag {
   background: transparent;
 }
 
+/* Sur mobile, "position: fixed" + "background-attachment: fixed" provoque un bug :
+   le fond garde une taille figée et saute lors du scroll (barre d'adresse qui
+   apparaît/disparaît). On bascule donc en absolute, ancré à la page, sous 768px. */
+@media (max-width: 768px) {
+  .detail-page::before {
+    position: absolute;
+    background-color: #000;
+    background-image: url('assets/Frame.png');
+    background-position: center;
+    background-size: 380% auto;
+    background-repeat: no-repeat;
+  }
+
+  .detail-page::after {
+    position: absolute;
+  }
+}
+
 .detail-header {
   text-align: center;
   margin-bottom: 3rem;
@@ -2818,4 +2844,359 @@ span.competence-tag {
 
 .gallery-card-image:hover {
   transform: scale(1.05);
+}
+
+/* ===================================
+   CARTE PROJET SANS PHOTO (placeholder)
+   =================================== */
+
+.gallery-card-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a1a1a, #000000);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.gallery-card-placeholder .placeholder-icon {
+  font-size: 4rem;
+  opacity: 0.85;
+  transition: transform 0.5s ease;
+}
+
+.gallery-card:hover .gallery-card-placeholder .placeholder-icon {
+  transform: scale(1.15) rotate(-5deg);
+}
+
+.hero-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a1a1a, #000000);
+}
+
+.hero-placeholder .placeholder-icon {
+  font-size: 6rem;
+  opacity: 0.9;
+}
+
+/* ===================================
+   TABLEAUX TECHNIQUES (specs)
+   =================================== */
+
+.spec-table-wrapper {
+  overflow-x: auto;
+  margin: 1.5rem 0 2rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+table.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 420px;
+}
+
+table.spec-table th,
+table.spec-table td {
+  padding: 0.9rem 1.2rem;
+  text-align: left;
+  color: rgba(255,255,255,0.9);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+table.spec-table thead th {
+  background: rgba(255,255,255,0.08);
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.9rem;
+}
+
+table.spec-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+table.spec-table tbody tr:hover {
+  background: rgba(255,255,255,0.04);
+}
+
+/* ===================================
+   BARRE DE PROGRESSION DU PROJET
+   =================================== */
+
+.project-progress {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+  border: 2px solid rgba(255,255,255,0.1);
+  border-radius: 15px;
+}
+
+.project-progress h2 {
+  font-size: 1.8rem;
+  color: #ffffff;
+  margin-bottom: 1.2rem;
+}
+
+.progress-bar-track {
+  position: relative;
+  width: 100%;
+  height: 36px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 1.2rem;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  width: 90%;
+  background: linear-gradient(90deg, #666666, #ffffff);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 15px;
+}
+
+.progress-bar-fill span {
+  color: #000;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.project-progress p {
+  color: rgba(255,255,255,0.85);
+  line-height: 1.7;
+}
+
+/* ===================================
+   TIMELINE DES VERSIONS (itérations)
+   =================================== */
+
+.version-timeline {
+  margin: 2rem 0 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.version-card {
+  background: linear-gradient(135deg, #141414, #0a0a0a);
+  border: 2px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 1.8rem 2rem;
+  transition: all 0.3s ease;
+}
+
+.version-card:hover {
+  border-color: rgba(255,255,255,0.3);
+  transform: translateX(5px);
+}
+
+.version-card-image {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.version-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.version-badge {
+  display: inline-block;
+  padding: 0.3rem 1rem;
+  background: linear-gradient(135deg, #ffffff, #e0e0e0);
+  color: #000;
+  font-weight: 700;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
+
+.version-card h3 {
+  color: #ffffff;
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.version-card p {
+  color: rgba(255,255,255,0.85);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.version-card p:last-child {
+  margin-bottom: 0;
+}
+
+.version-card ul {
+  margin: 0 0 1rem;
+  padding-left: 1.3rem;
+}
+
+.version-card li {
+  color: rgba(255,255,255,0.8);
+  line-height: 1.6;
+  margin-bottom: 0.4rem;
+}
+
+.version-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.3rem 0.9rem;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.version-tag-issue {
+  background: rgba(220, 38, 38, 0.15);
+  color: #f87171;
+  border: 1px solid rgba(248, 113, 113, 0.4);
+}
+
+.version-tag-fix {
+  background: rgba(34, 197, 94, 0.15);
+  color: #4ade80;
+  border: 1px solid rgba(74, 222, 128, 0.4);
+}
+
+@media (max-width: 768px) {
+  .version-card {
+    padding: 1.4rem 1.5rem;
+  }
+
+  .version-card-image {
+    height: 180px;
+  }
+
+  .progress-bar-track {
+    height: 30px;
+  }
+}
+
+.version-card-image.version-card-image-v1 {
+  height: 450px;
+  object-position: center 60%;
+}
+
+.version-card-image.version-card-image-v2 {
+  height: 500px;
+  object-position: center 60%;
+}
+
+.version-card-image.version-card-image-v2-2 {
+  height: 400px;
+  object-position: center 58%;
+}
+
+.version-card-image.version-card-image-v2-3 {
+  height: 450px;
+  object-position: center 60%;
+}
+
+.version-card-image.version-card-image-v2-4 {
+  height: 300px;
+  object-position: center 58%;
+}
+
+.version-card-image.version-card-image-v3 {
+  height: 400px;
+  object-position: center 68%;
+}
+
+.version-card-image.version-card-image-v4 {
+  height: 650px;
+  object-position: center 55%;
+}
+
+.version-card-image.version-card-image-v5 {
+  height: 500px;
+  object-position: center 60%;
+}
+
+.project-hero-image.project-hero-final {
+  height: 500px;
+}
+
+.project-hero-image.project-hero-final img {
+  object-position: center 60%;
+}
+
+@media (max-width: 768px) {
+  .version-card-image.version-card-image-v1,
+  .version-card-image.version-card-image-v2,
+  .version-card-image.version-card-image-v2-2,
+  .version-card-image.version-card-image-v2-3,
+  .version-card-image.version-card-image-v2-4,
+  .version-card-image.version-card-image-v3,
+  .version-card-image.version-card-image-v4,
+  .version-card-image.version-card-image-v5 {
+    height: 240px;
+  }
+
+  .project-hero-image.project-hero-final {
+    height: 340px;
+  }
+}
+
+/* ===================================
+   BLOCS DE CODE / CONFIGURATION
+   =================================== */
+
+.code-block {
+  background: #0a0a0a;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 10px;
+  padding: 1.2rem 1.5rem;
+  margin: 1.2rem 0 1.8rem;
+  overflow-x: auto;
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #e5e5e5;
+}
+
+.code-block code {
+  white-space: pre;
+}
+
+/* ===================================
+   IMAGE HÉROS PLUS HAUTE (page détail SoundPilot)
+   =================================== */
+
+.project-hero-image.project-hero-tall {
+  height: 560px;
+}
+
+.project-hero-image.project-hero-tall img {
+  object-position: center 58%;
+}
+
+@media (max-width: 768px) {
+  .project-hero-image.project-hero-tall {
+    height: 340px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-hero-image.project-hero-tall {
+    height: 280px;
+  }
 }
